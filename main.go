@@ -24,5 +24,9 @@ func main() {
 		stu := Student{Name: "张三", Age: 12}
 		context.JSON(200, stu)
 	})
+	g.GET("/api2/user/info", func(context *gin.Context) {
+		stu := Student{Name: "张三api2", Age: 12}
+		context.JSON(200, stu)
+	})
 	g.Run()
 }
